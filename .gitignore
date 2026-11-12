@@ -1,0 +1,57 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python virtual environments
+.venv/
+.venv-*/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# macOS files
+.DS_Store
+
+# IDE settings
+.vscode/
+
+# Logs
+*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Build and distribution
+build/
+dist/
+*.egg-info/
+
+# Temporary files
+*.tmp
+
+
+# Local vector database
+qdrant_data/
+
+# Backup dependency files
+requirements-backup.txt
+
+# Accidental temporary file
+=0.115,
+
+# Local vector database
+qdrant_data/
+
+# Backup dependency files
+requirements-backup.txt
