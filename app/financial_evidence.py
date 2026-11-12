@@ -18,7 +18,6 @@ import pdfplumber
 import numpy as np
 import pandas as pd
 from rank_bm25 import BM25Okapi
-from sentence_transformers import CrossEncoder, SentenceTransformer
 from openai import OpenAI
 import pdfplumber
 from app.config import settings
@@ -163,6 +162,8 @@ class FinancialRetriever:
         if not chunks:
             self.embedder = self.reranker = self.vectors = self.bm25 = None
             return
+        from sentence_transformers import CrossEncoder, SentenceTransformer
+
         if EMBEDDING_MODEL not in _MODEL_CACHE:
             _MODEL_CACHE[EMBEDDING_MODEL] = SentenceTransformer(EMBEDDING_MODEL)
         if RERANKER_MODEL not in _MODEL_CACHE:

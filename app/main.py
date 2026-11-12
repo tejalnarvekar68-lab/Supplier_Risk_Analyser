@@ -14,7 +14,6 @@ from app.financial_evidence import build_financial_chunks
 import json
 import mimetypes
 from app.graph import run_assessment
-from app.RAG_chain import rag_chain_analysis
 from statistics import mean
 
 logging.basicConfig(level=getattr(logging,settings.log_level.upper(),logging.INFO))
@@ -296,6 +295,8 @@ def supplier_comparison(supplier_id1:int,supplier_id2:int,db:Session=Depends(get
 
 
 
+
+    from app.RAG_chain import rag_chain_analysis
 
     retriever_analysis = rag_chain_analysis(supplier_id1=supplier_id1,
                                             supplier_id2=supplier_id2,
