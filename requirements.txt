@@ -34,3 +34,4 @@ pdfplumber
 #sentence-transformers
 #rank-bm25
 #numpy
+rank-bm25==0.2.2
