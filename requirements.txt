@@ -35,3 +35,10 @@ pdfplumber
 #rank-bm25
 #numpy
 rank-bm25==0.2.2
+
+rank-bm25==0.2.2
+sentence-transformers==3.4.1
+transformers==4.48.3
+numpy==1.26.4
+qdrant-client==1.20.0
+langchain-qdrant==0.2.1
