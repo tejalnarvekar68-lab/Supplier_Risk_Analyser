@@ -28,22 +28,12 @@ with t2:
     if submit:
         payload={"name":name,"country":country or None,"category":category or None}
         if website.strip(): payload["website"]=website.strip()
-        '''
-        try: st.success(f"Created supplier ID {post('/suppliers',json=payload)['id']}")
-        except Exception as e: st.error(str(e))'''
-
         try:
-        created = post("/suppliers", json=payload)
-
-        st.success(f"Created supplier ID {created['id']}")
-
-        # Reload the dashboard and fetch the updated supplier list
-        st.rerun()
-
+            created = post("/suppliers", json=payload)
+            st.success(f"Created supplier ID {created['id']}")
+            st.rerun()
         except Exception as e:
             st.error(str(e))
-
-
 
 with t3:
     if not suppliers: st.info("Add a supplier first.")
