@@ -23,7 +23,7 @@ from qdrant_client.http.models import Distance, VectorParams
 from langchain_qdrant import QdrantVectorStore
 
 from app.config import settings
-from langchain_openrouter import ChatOpenRouter
+#from langchain_openrouter import ChatOpenRouter
 
 
 # ==========================================
@@ -201,7 +201,7 @@ def rag_chain_analysis(
     # STEP 7: Setup LLM
     # --------------------------------------
 
-    llm = ChatOpenRouter(
+    llm = ChatOpenAI(
         model="openrouter/free",
         base_url="https://openrouter.ai/api/v1",
         api_key=settings.openrouter_api_key,
